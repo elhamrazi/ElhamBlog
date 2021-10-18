@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+  <h1>Elham's Blog</h1>
+  <p>Welcome to My Blog, a website developed by <em>Elham Razi</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>posts:</strong> {{ num_post }}</li>
+  </ul>
+    <h2>all posts:</h2>
+    <ol>
+        {% for p in posts %}
+            <a href="{{ p.get_absolute_url }}">{{ p.name }}</a>
+            <p>{{ p.content|slice:"0:50" }}...</p>
+            <img src={{ p.image }} alt="photo" height="400" width="600">
+            <hr>
+        {% endfor %}
+    </ol>
+{% endblock %}

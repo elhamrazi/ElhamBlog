@@ -1,0 +1,35 @@
+{% extends "base/base.html" %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'css/post.css' %}">
+{% block content %}
+  <h1>Title: {{ post.name }}</h1>
+
+  <p><strong>Author:</strong> <a href="">{{ post.author }}</a></p> <!-- author detail link not yet defined -->
+
+  <div style="margin-left:20px;margin-top:20px">
+    <p><strong>{{ post.content }}</strong></p>
+    <img src="{{ post.image }}" alt="{{ post.name }}" height=400 width=600>
+  </div>
+
+    <p>Click on the play button to play a sound:</p>
+
+<audio preload="auto" controls>
+  <source src="{% static post_path %}" type="audio/wav" />
+  Your browser does not support the audio element.
+</audio>
+
+
+    <hr>{% for comment in comments %}
+    <div class="comment">
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment.content|linebreaks }}</p>
+        <audio preload="auto" controls>
+            <source src="{% static comment.path %}" type="audio/wav" />
+                Your browser does not support the audio element.
+        </audio>
+    </div>{% empty %}
+    <p>No comments here yet :(</p>
+{% endfor %}
+<a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+{% endblock %}
+
