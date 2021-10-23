@@ -1,4 +1,4 @@
-/main/migrations
-/__pychace__
-/venv
-/.idea
+main/migrations/
+__pychace__/
+venv/
+.idea/
