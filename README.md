@@ -2,7 +2,7 @@
 
 Cloud Computing Course first assignment.<br>
 A simple Blog Using Django Framework and Used IBM Cloud Services for Text Analysis and Text to Speech.
-Deployed on [pythonanywhere Cloud](https://elrazi.pythonanywhere.com/) (Paas)
+Deployed on [pythonanywhere Cloud](https://elham99.pythonanywhere.com/) (Paas)
 
 Fall 2021 - Dr. Djavadi
 
