@@ -1,7 +1,7 @@
 # ElhamBlog
 
 Cloud Computing Course first assignment.<br>
-A simple Blog Using Django Framework and Used IBM Cloud Services for Text Analysis and Text to Speech.
+A simple Blog Using Django Framework and Used IBM Cloud Services for Text Analysis and Text to Speech.<br>
 Deployed on [pythonanywhere Cloud](https://elham99.pythonanywhere.com/) (Paas)
 
 Fall 2021 - Dr. Djavadi
@@ -14,10 +14,12 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the req
 pip install -r requirements.txt
 ```
 
-
+Then, you can run this locally on your machine, using this command:
 ```bash
 python manage.py runserver
 ```
+
+You need to take care of the database too! you can edit the required settings in settings.py file.
 
 
 ## License
